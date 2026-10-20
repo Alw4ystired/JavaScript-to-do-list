@@ -1,0 +1,135 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	max-width: 600px;
+	margin: 30px auto;
+	padding: 20px;
+	color: #1b2845;
+}
+
+h1 {
+	margin-bottom: 24px;
+}
+
+.aggiunta {
+	display: flex;
+	gap: 10px;
+	margin-bottom: 20px;
+}
+
+input {
+	flex: 1;
+	padding: 10px;
+	font-size: 16px;
+	font-family: inherit;
+}
+
+button {
+	padding: 10px 20px;
+	cursor: pointer;
+	font-family: inherit;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+li {
+	padding: 10px;
+	border-bottom: 1px solid #ddd;
+	/* ho aggiunto queste cose sotto per stilizzare li altrimenti veniva tutto attaccato sulla sinistra */
+	display: block;
+	overflow: hidden;
+	padding: 10px;
+	line-height: 1.5;
+}
+
+/* Aggiungi qui le tue regole CSS per:
+   - .priorita-alta / .priorita-media / .priorita-bassa
+   - .badge (l'etichetta della priorità dentro il task)
+   - .data (la data di creazione)
+   - .evidenziato (sfondo giallo, bordo)
+*/
+
+.priorita-alta {
+	background-color: #FDE2E2;
+}
+
+.priorita-media {
+	background-color: #FFFBE6;
+}
+
+.priorita-bassa {
+	background-color: #E2F5E2;
+}
+
+.badge {
+	font-size: 12px;
+	padding: 2px 8px;
+	border-radius: 10px;
+	background-color: black;
+	color: white;
+	text-transform: uppercase;
+	margin-left: 10px;
+}
+
+.data {
+	font-size: 12px;
+	color: gray;
+	margin-left: auto;
+}
+
+.evidenziato {
+	border: 3px solid #F6C948;
+}
+
+.divData {
+	width: fit-content;
+	float: right;
+}
+
+.li-button { /* ho cambiato il nome della classe, aveva uno spazio e non me lo prendeva in JS, ho aggiunto un - tra li e button */
+	font-size: 12px;
+	height: fit-content;
+	padding: 4px;
+	margin-left: 5px;
+}
+
+/* ROBA MIA 
+
+li {
+    display: block; 
+    overflow: hidden; 
+    padding: 10px;
+}*/
+
+.task-left {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.task-right {
+	float: right;
+	/* avevo messo qua display: inline-block; ma css me lo dava come errore per via del float che deve essere none, l'ho commentato e basta ma credevo ci volesse*/
+	vertical-align: middle;
+}
+
+.task-right .data {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+
+.task-right button {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.evidenziato {
+	border: 3px solid #F6C948;
+	background-color: #FFFBE6;
+}

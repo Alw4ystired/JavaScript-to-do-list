@@ -61,7 +61,7 @@ const aggiungiTask = (testo, priorita) => {
 
 
     const btnElimina = document.createElement('button');
-    btnElimina.classList.add('li-button');
+    btnElimina.classList.add('li-button'); // non sembra funzionare (??)
     btnElimina.textContent = 'Elimina';
 
     divRight.appendChild(spanData);
